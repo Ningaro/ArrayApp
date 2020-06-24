@@ -1,0 +1,20 @@
+﻿  MyForm.cpp
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(470): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(490): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(492): warning C4244: =: преобразование "wchar_t" в "char", возможна потеря данных
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(500): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(516): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(529): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(538): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(548): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(557): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(565): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(572): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(579): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(592): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(600): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\ningaro\documents\github\arrayapp\MyForm.h(613): warning C4018: <: несоответствие типов со знаком и без знака
+MyForm.cpp(7): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  MyForm.obj : /DEBUG:FASTLINK не поддерживается, если присутствует управляемый код; выполняется перезапуск компоновки с /DEBUG:FULL
+  ArrayApp.vcxproj -> C:\Users\Ningaro\Documents\GitHub\ArrayApp\Debug\ArrayApp.exe
+  ArrayApp.vcxproj -> C:\Users\Ningaro\Documents\GitHub\ArrayApp\Debug\ArrayApp.pdb (Partial PDB)

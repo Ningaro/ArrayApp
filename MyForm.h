@@ -2,6 +2,7 @@
 
 // Мои библиотеки 
 #include <cstdlib>
+#include <string>
 
 int lastSymbol;
 
@@ -482,7 +483,8 @@ private: System::Void RandomArr_Click(System::Object^  sender, System::EventArgs
 private: System::Void Go_Click(System::Object^  sender, System::EventArgs^  e) {
 	Console::WriteLine("\nКлац!");
 	int Leng = SourceArr->Text->Length; int m = 1;
-	if (SourceArr->Text->Substring(Leng - 1, 1) == " ") { SourceArr->Text = SourceArr->Text->Substring(0, Leng - 1); Leng = SourceArr->Text->Length;
+	//Удаляем лишние пробелы в конце строки
+	while (SourceArr->Text->Substring(Leng - 1, 1) == " ") { SourceArr->Text = SourceArr->Text->Substring(0, Leng - 1); Leng = SourceArr->Text->Length;
 	}
 	char *MyArr = new char[Leng];
 	int  n = 0; int j = 0; int lastSpace = 0;
@@ -643,7 +645,24 @@ private: System::Void ReadFromFile_Click(System::Object^  sender, System::EventA
 			return;
 		}
 		else {
-			SourceArr->Text = System::IO::File::ReadAllText(openFileDialog1->FileName);
+			String^ text = System::IO::File::ReadAllText(openFileDialog1->FileName); 
+			Console::WriteLine("Входная строка из файла: " + text);
+			String^ textReady = "";
+			// Удаляем лишние символы в начале строки
+			while (text->Substring(0, 1) == " ") text = text->Substring(1, text->Length-1);
+			// Удаляем лишние символы в коцне строки
+			while (text->Substring(text->Length - 1, 1) == " ") text = text->Substring(0, text->Length - 1);
+			//Проверяем каждый символ строки на "лишние пробелы".
+			char lastSymbol = Convert::ToChar(text->Substring(0,1));
+			for each (Char c in text) {
+				if (!((lastSymbol == ' ') && (c == ' ')))
+					textReady += c;
+				lastSymbol = c;
+				
+			}
+			Console::WriteLine("Измененая строка: " + textReady);
+			SourceArr->Text = textReady;
+
 		}
 	}
 }
